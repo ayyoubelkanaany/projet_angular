@@ -1,0 +1,19 @@
+warning: LF will be replaced by CRLF in src/app/navigation/navigation.component.html.
+The file will have its original line endings in your working directory
+[1mdiff --git a/src/app/navigation/navigation.component.html b/src/app/navigation/navigation.component.html[m
+[1mindex c923321..a53e1a3 100644[m
+[1m--- a/src/app/navigation/navigation.component.html[m
+[1m+++ b/src/app/navigation/navigation.component.html[m
+[36m@@ -1,11 +1,9 @@[m
+ <div class="container">[m
+   <div class="row">[m
+[31m-  [m
+ <div class="navbar">[m
+    <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>[m
+    <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>[m
+    <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>[m
+[31m-   [m
+ </div>[m
+ </div>[m
+ </div>[m
+\ No newline at end of file[m
