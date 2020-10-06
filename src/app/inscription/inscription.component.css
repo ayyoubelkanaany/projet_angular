@@ -1,0 +1,21 @@
+.parent{
+    padding:5%  15% 5% 15% ;
+    background-color:#4654A3;
+    border: 1px solid transparent;
+    border-radius: 20px;
+}
+.btn{
+    background-color:white;
+    color:#4654A3;
+    font-size: 22px;
+}
+.btn:hover{
+    background-color:#4654A3;
+    color:white;
+}
+label{
+    color: white;;
+}
+.file-chose{
+    color:black;
+}

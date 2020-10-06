@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Utilisateur } from '../model/Utilisateur.model';
 
 @Component({
   selector: 'app-inscription',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inscription.component.css']
 })
 export class InscriptionComponent implements OnInit {
-
-  constructor() { }
+  
 
   ngOnInit(): void {
+    
   }
 
 }

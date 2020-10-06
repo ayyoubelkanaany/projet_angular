@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Utilisateur } from '../model/Utilisateur.model';
 
 @Component({
   selector: 'app-navigation',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
-  constructor() { }
+  private utilisateur = new Utilisateur('El kanaany','Ayyoub');
+  constructor() {
+    this.utilisateur.setAdress('Marakech');
+   }
 
   ngOnInit(): void {
+    console.log(this.utilisateur.getAdress())
   }
 
+  
 }

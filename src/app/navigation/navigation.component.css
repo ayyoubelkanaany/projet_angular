@@ -1,7 +1,7 @@
 /* Style the navigation bar */
 .navbar {
     width: 100%;
-    background-color: rgb(12, 116, 235);
+    background-color:#4654A3;
     text-size-adjust: 30px;
   }
   
@@ -16,7 +16,7 @@
   
   /* Navbar links on mouse-over */
   .navbar a:hover {
-    font-size: 22px;
+    
   }
   
   /* Current/active navbar link */
@@ -24,17 +24,24 @@
     background-color: #4CAF50;
   }
   .logo{
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
+    border-color: transparent;
+    border-radius: 30px;
+    border-style: solid;
   }
   .btn{
     text-align: center;
-    padding: 12px;
+    padding: 9px;
     color: white;
     text-decoration: none;
     font-size: 20px;
-    background-color: blue;
-    border: solid 5px blue;
+    background-color: #4654A3;
+    border: solid 5px #4654A3;
+  }
+  .btn:hover{
+    background-color: white;
+    color: #4654A3;
   }
   /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
   @media screen and (max-width: 1000px) {

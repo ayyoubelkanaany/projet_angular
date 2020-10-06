@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { InscriptionService } from './controlleur/inscription.service';
-import { User } from './model/user.model';
+import { UtilisateurService } from './controlleur/Utilisateur.service';
+
 
 @Component({
   selector: 'app-root',
@@ -9,11 +9,7 @@ import { User } from './model/user.model';
 })
 export class AppComponent implements OnInit {
     
-    constructor(private inscriptionservice: InscriptionService) {
-
-      console.log(this.inscriptionservice.User.Nom);
-      this.inscriptionservice.User = new User;
-      console.log(this.inscriptionservice.User.Nom);
+    constructor(private utilisateurService: UtilisateurService) {
      }
   ngOnInit(): void {
       console.log("hello");
