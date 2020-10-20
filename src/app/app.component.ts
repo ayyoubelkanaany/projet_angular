@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UtilisateurService } from './controlleur/Utilisateur.service';
+
 
 
 @Component({
@@ -9,9 +9,9 @@ import { UtilisateurService } from './controlleur/Utilisateur.service';
 })
 export class AppComponent implements OnInit {
     
-    constructor(private utilisateurService: UtilisateurService) {
+    constructor() {
      }
   ngOnInit(): void {
-      console.log("hello");
+      
   }
 }

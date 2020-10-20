@@ -2,27 +2,33 @@
     <div class="row ">
     <div class="col-md-3"></div>
     <div class="col-md-6">
-        <form class="card mt-3 parent">
+        <form class="card mt-3 parent"  ng-controller="validateCtrl" 
+        name="myForm" novalidate>
             <div class="form-row ">
                 <div class="form-group col-md-6">
                   <label for="inputNom">Nom</label>
-                  <input type="text" class="form-control" id="inputNom" placeholder="Nom">
+                  <input type="text" (focusout)="NomVAlidation($event.target.value)" 
+                  class="form-control" id="inputNom" placeholder="Nom" name="nom" required  [(ngModel)]="utilisateur.nom" >
+                  <span style="color:red" ng-show="myForm.nom.$dirty && myForm.nom.$invalid">
+                    <span ng-show="myForm.user.$error.required">Username is required.</span>
+                    </span>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputPrenom">Prenom</label>
-                    <input type="text" class="form-control" id="inputPrenom" placeholder="Prenom">
+                    <input type="text" required minlength="4" class="form-control" id="inputPrenom" placeholder="Prenom" name="prenom" [(ngModel)]="utilisateur.prenom" >
                   </div>
               </div>
             <div class="form-row">
               <div class="form-group col-md-12">
                 <label for="inputEmail4">Email</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                <input type="email" class="form-control"  id="inputEmail4" placeholder="Email" name="mail" [(ngModel)]="utilisateur.mail" >
               </div>
             </div>
+            
             <div class="form-row">
                 <div class="form-group col-md-12">
                     <label for="inputPassword4">Password</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password" name="pass" [(ngModel)]="utilisateur.password">
                   </div>
             </div>
             <div class="form-row">
@@ -34,48 +40,51 @@
             <div class="form-row">
             <div class="form-group col-md-12">
               <label for="inputAddress">Address</label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="Address" [(ngModel)]="utilisateur.adress">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-12">
                 <label for="inputAddress2">Telephone</label>
-                <input type="tel" class="form-control" id="inputAddress2" placeholder="numero de telephone">
+                <input type="tel" class="form-control"  id="inputAddress2" placeholder="numero de telephone" name="telephone" [(ngModel)]="utilisateur.telephone">
               </div>
           </div>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="inputState">Niveau</label>
-                <select id="inputState" class="form-control">
-                  <option selected>Choose...</option>
-                  <option>...</option>
+                <label for="inputState" >Niveau</label>
+                <select id="inputState" class="form-control" name="niveau.id" (change)="onChange($event.target.value)">
+                  <option selected>Choisir le niveau</option>
+                  <option  *ngFor="let niveau of Niveaus" [value]="niveau.id">{{niveau.nom}}</option>
                 </select>
               </div>
               <div class="form-group col-md-6">
                 <label for="age">Age</label>
-                <input type="number"  class="form-control" id="age" >
+                <input type="number"  class="form-control" id="age" name="age" [(ngModel)]="utilisateur.age">
               </div>
             </div>
-            <div class="form-row">
-                <div class="form-group col-md-12">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
-                        </div>
-                        <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="inputGroupFile01"
-                            aria-describedby="inputGroupFileAddon01">
-                          <label class="custom-file-label file-chose" for="inputGroupFile01">Choose file</label>
-                        </div>
-                      </div>
-                  </div>
-            </div>
+            
          <div class="form-row align-content-end align-items-end">
-            <button type="submit" class="btn mt-3 mx-1">S'inscrire</button>
-            <button type="submit" class="btn  mt-3 mx-1">Se Connecter</button>
+            <input type="submit" class="btn mt-3 mx-1" (click)="save()"
+            ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||  
+                myForm.email.$dirty && myForm.email.$invalid" value="S'inscrire">
+            <a routerLink="/connexion" > <button  class="btn  mt-3 mx-1">Se Connecter</button></a>
          </div>
           </form>
     </div>
     <div class="col-md-3"></div>
     </div>
 </div>
+<!--div class="form-row">
+  <div class="form-group col-md-12">
+      <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+          </div>
+          <div class="custom-file">
+            <input  type="file" class="custom-file-input" id="inputGroupFile01"
+              aria-describedby="inputGroupFileAddon01" name="image" (change)="handleFileInput($event.target.files)" >
+            <label class="custom-file-label file-chose" for="inputGroupFile01">Choose file</label>
+          </div>
+        </div>
+    </div>
+</div-->

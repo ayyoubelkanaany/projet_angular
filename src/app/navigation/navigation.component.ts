@@ -8,13 +8,12 @@ import { Utilisateur } from '../model/Utilisateur.model';
 })
 export class NavigationComponent implements OnInit {
 
-  private utilisateur = new Utilisateur('El kanaany','Ayyoub');
   constructor() {
-    this.utilisateur.setAdress('Marakech');
+    
    }
 
   ngOnInit(): void {
-    console.log(this.utilisateur.getAdress())
+  
   }
 
   

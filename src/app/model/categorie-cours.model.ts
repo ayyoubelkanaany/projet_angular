@@ -17,7 +17,7 @@ export class CategorieCours {
     public getNom(): String {
         return this.Nom;
     }
-
+ 
     public setNom(Nom: String): void {
         this.Nom = Nom;
     }

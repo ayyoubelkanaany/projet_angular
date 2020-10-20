@@ -1,0 +1,120 @@
+
+<ngb-carousel
+[showNavigationArrows]="true" 
+[showNavigationIndicators]="true"
+interval="4000"
+[keyboard]="true"
+[pauseOnHover]="true"
+[wrap]="true"
+[activeId]="'secondSlide'">
+    <ng-template ngbSlide id="firstSlide">
+      <div class="picsum-img-wrapper">
+        <img src="../../assets/Images/img1.png" alt="Angular Carousel 1">
+      </div>
+      <div class="carousel-caption">
+        <div class="caption mx-auto">
+            <div class="container-fluid mx-0 my-0">
+                <div class="row  text-uppercase mx-0 my-0">
+                       <h3 class="mx-auto">Title Goes Here</h3>
+                </div>
+                 <div class="row text-uppercase">
+                       <p class=" mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                 </div>
+                <div class="row">
+                     <button class="btn btn-block btn-danger py-3 px-3 mx-5 my-2">Contact us</button>
+                     <button class="btn btn-block btn-danger py-3 px-3 mx-5 my-2">Sinscrire</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    </ng-template>
+    <ng-template ngbSlide id="secondSlide">
+        <div class="picsum-img-wrapper">
+          <img src="../../assets/Images/img2.png" alt="Angular Carousel 2">
+        </div>
+        <div class="carousel-caption">
+            <div class="caption mx-auto">
+                <div class="container mx-0 my-0">
+                    <div class="row  text-uppercase mx-0 my-0">
+                           <h3 class="mx-auto">Title Goes Here</h3>
+                    </div>
+                     <div class="row text-uppercase">
+                           <p class=" mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                     </div>
+                    <div class="row">
+                         <button class="btn btn-block btn-danger py-3 px-3 mx-5 my-2">Contact us</button>
+                         <button class="btn btn-block btn-danger py-3 px-3 mx-5 my-2">Sinscrire</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+      </ng-template>
+      <ng-template ngbSlide id="thirdSlide">
+        <div class="picsum-img-wrapper">
+          <img src="../../assets/Images/img3.png" alt="Angular Carousel 3">
+        </div>
+        <div class="carousel-caption">
+            <div class="caption mx-auto">
+                <div class="container mx-0 my-0">
+                    <div class="row  text-uppercase mx-0 my-0">
+                           <h3 class="mx-auto">Title Goes Here</h3>
+                    </div>
+                     <div class="row text-uppercase">
+                           <p class=" mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                     </div>
+                    <div class="row">
+                         <button class="btn btn-block btn-danger py-3 px-3 mx-5 my-2">Contact us</button>
+                         <button class="btn btn-block btn-danger py-3 px-3 mx-5 my-2">Sinscrire</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </ng-template>
+  </ngb-carousel>
+  <div class="container my-2">
+      <div class="row">
+          <div class="col-md-12">
+              <h2 class="text-center text-uppercase" style="border-bottom:2px solid #d9534f;border-radius: 20px;">Nos Servicess</h2>
+          </div>
+      </div>
+  </div>
+ <div class="container-fluid mt-5">
+     <div class="row">
+         <div class="col-md-12">
+    <div
+    ng2-carouselamos
+    class="slides-wrapper"
+    [items]="images"
+    [width]="3000"
+    [$prev]="prev"
+    [$next]="next"
+    [$item]="item"
+    
+  >
+  </div>
+
+
+  <ng-template #prev>
+    <img src="../../assets/Images/prev.png" id="left" style="width: 40px;height:40px;" />
+  </ng-template>
+  <ng-template #next>
+    <img src="../../assets/Images/next.png" id="right" style="background-color:#d9534f;width: 30px;height:30px;"  />
+  </ng-template>
+  <ng-template #item let-item let-i="index" >
+
+  <div class="slide-items">
+    <div class="card shadow">
+        <img src="{{ item.name }}" style="width: 400px;height:300px;"/>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Doloremque amet laborum voluptatum ratione d
+            icta cumque veritatis corrupti labore inventore
+        </p>
+        <button class="bnt btn-danger btn-lg ">Voir Plus</button>
+    </div>
+  </div>
+</ng-template>
+ </div>
+ </div>
+ </div>

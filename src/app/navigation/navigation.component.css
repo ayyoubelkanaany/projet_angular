@@ -1,7 +1,7 @@
 /* Style the navigation bar */
 .navbar {
     width: 100%;
-    background-color:#4654A3;
+    background-color:#d9534f;
     text-size-adjust: 30px;
   }
   
@@ -36,12 +36,13 @@
     color: white;
     text-decoration: none;
     font-size: 20px;
-    background-color: #4654A3;
-    border: solid 5px #4654A3;
+    background-color: #d9534f;
+    border: solid 5px #d9534f;
+    border-radius: 30px;
   }
   .btn:hover{
     background-color: white;
-    color: #4654A3;
+    color:#d9534f;
   }
   /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
   @media screen and (max-width: 1000px) {

@@ -1,0 +1,12 @@
+.card-body img{
+    height:100%;
+    width: 50%;
+}
+div h5{
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+.card-header{
+    background-color: royalblue ;
+}

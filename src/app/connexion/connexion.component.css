@@ -1,5 +1,6 @@
+
 .parent{
-    padding:5%  15% 5% 15% ;
+    padding:5%  5% 5% 5% ;
     background-color:#4654A3;
     border: 1px solid transparent;
     border-radius: 20px;
@@ -22,9 +23,6 @@ label{
 .file-chose{
     color:black;
 }
-.inputvalid{
-    border: 2px solid rgb(40, 63, 40);
-}
-.inputinvalid{
-    border: 2px solid green;
+a:hover{
+    color: #15c5e4;
 }
