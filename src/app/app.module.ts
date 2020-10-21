@@ -11,6 +11,9 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +30,9 @@ import { Ng2CarouselamosModule } from 'ng2-carouselamos';
     FormsModule,
     NgbModule,
     Ng2CarouselamosModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

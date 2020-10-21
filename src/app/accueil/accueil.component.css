@@ -10,3 +10,18 @@ div h5{
 .card-header{
     background-color: royalblue ;
 }
+.example-card {
+    width: 100%;
+    height: 50%;
+    background-color:#d9534f;
+  }
+  
+  .example-header-image {
+    background-image: url('../../assets/Images/img1.png');
+    background-size: cover;
+  }
+  .article{
+    background-size: cover;
+    background-repeat: no-repeat;
+      background-image: url("../../assets/Images/wave1.svg");
+  }

@@ -1,20 +1,21 @@
 
 .parent{
     padding:5%  5% 5% 5% ;
-    background-color:#4654A3;
+    background-color:#d9534f8a;
     border: 1px solid transparent;
     border-radius: 20px;
+    margin: 10%  0% 12% 0% ;
 }
 .btn{
     background-color:white;
-    color:#4654A3;
+    color:#d9534f;
     font-size: 20px;
     border: solid 5px transparent;
     border-radius: 10px;
     width: 200px;
 }
 .btn:hover{
-    background-color:#4654A3;
+    background-color:#d9534f;;
     color:white;
 }
 label{
@@ -25,4 +26,10 @@ label{
 }
 a:hover{
     color: #15c5e4;
+}
+.container-fluid{
+    background-image: url("../../assets/Images/img3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
